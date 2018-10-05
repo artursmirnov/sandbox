@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    test: '7',
+    test: '8',
     modulePrefix: 'sandbox',
     environment,
     rootURL: '/',
