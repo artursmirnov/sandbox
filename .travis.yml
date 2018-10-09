@@ -1,7 +1,7 @@
----
 language: node_js
 node_js:
-  - "6"
+  - 6
+  - 10
 
 sudo: false
 dist: trusty
@@ -14,9 +14,15 @@ cache:
     - $HOME/.npm
 
 env:
-  global:
-    # See https://git.io/vdao3 for details.
-    - JOBS=1
+  matrix:
+    - SECRET_VAR2=SECRET2
+    - SECRET_VAR2=SECRET3
+    - SECRET_VAR2=SECRET4
+
+matrix:
+  allow_failures:
+    - env: SECRET_VAR2=SECRET2
+      node_js: 10
 
 before_install:
   - npm config set spin false
