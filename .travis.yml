@@ -6,6 +6,10 @@ node_js:
 sudo: false
 dist: trusty
 
+notifications:
+  email:
+    - artur@travis-ci.com
+
 addons:
   chrome: stable
 
